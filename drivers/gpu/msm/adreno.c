@@ -230,7 +230,7 @@ static const struct {
 };
 
 /* Nice level for the higher priority GPU start thread */
-static unsigned int _wake_nice = -7;
+static int _wake_nice = -7;
 
 /**
  * adreno_perfcounter_init: Reserve kernel performance counters
