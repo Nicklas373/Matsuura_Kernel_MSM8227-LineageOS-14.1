@@ -518,6 +518,7 @@ static int kgsl_pwrctrl_idle_timer_show(struct device *dev,
 					char *buf)
 {
 	struct kgsl_device *device = kgsl_device_from_dev(dev);
+
 	if (device == NULL)
 		return 0;
 	/* Show the idle_timeout in msec */
