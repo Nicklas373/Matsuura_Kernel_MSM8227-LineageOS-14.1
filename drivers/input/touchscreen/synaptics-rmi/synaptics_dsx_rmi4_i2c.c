@@ -375,7 +375,7 @@ void doubletap2wake_reset(void) {
  	y_pre = 0;
 }
  
-static bool detect_doubletap2wake(int x, int y)
+static void detect_doubletap2wake(int x, int y)
 {
 if((x>10) && (x<1000) && (y>10) && (y<1000)) { /* Prevent sliding from screen edge */
  	//printk("[ngxson] [DT2W] dt2w x=%d y=%d\n", x, y);
