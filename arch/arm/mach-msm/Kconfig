@@ -2594,4 +2594,10 @@ config HAS_MACH_MEMUTILS
 	help
 	Faster memcpy performance for Krait
 
+config INTELLI_PLUG
+	bool "intelliplug hotplug"
+	default y
+	help
+	  An improved hotplug by faux123.
+
 endif
