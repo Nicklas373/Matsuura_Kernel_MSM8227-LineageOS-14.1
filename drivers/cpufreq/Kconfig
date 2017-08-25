@@ -146,12 +146,6 @@ config CPU_FREQ_DEFAULT_GOV_ADAPTIVE
 	  'adaptive' governor for latency-sensitive workloads and demanding
 	  performance.
 
-config CPU_FREQ_DEFAULT_GOV_SMARTMAX
-        bool "smartmax"
-        select CPU_FREQ_GOV_SMARTMAX
-        help
-          Use the CPUFreq governor 'smartmax' as default
-
 config CPU_FREQ_DEFAULT_GOV_HYPER
 	bool "hyper"
 	select CPU_FREQ_GOV_HYPER
@@ -160,6 +154,12 @@ config CPU_FREQ_DEFAULT_GOV_HYPER
 	you to get a full dynamic cpu frequency capable system by simply
 	loading your cpufreq low-level hardware driver, using the
 	'hyper' governor for latency-sensitive workloads.
+
+config CPU_FREQ_DEFAULT_GOV_SMARTASSV2
+	bool "smartass2"
+	select CPU_FREQ_GOV_SMARTASSV2
+	help
+	Use the CPUFreq governor 'smartassV2' as default.
 
 endchoice
 
@@ -322,12 +322,6 @@ config CPU_FREQ_GOV_ADAPTIVE
 
 	  If in doubt, say N.
 
-config CPU_FREQ_GOV_SMARTMAX
-        tristate "'smartmax' cpufreq policy governor"
-        select CPU_FREQ_TABLE
-        help
-          'smartmax' combined ondemand and smartass2
-
 config CPU_FREQ_GOV_HYPER
 	tristate "'hyper' cpufreq governor"
 	depends on CPU_FREQ
@@ -335,6 +329,14 @@ config CPU_FREQ_GOV_HYPER
 	  'hyper' - A tweaked "ondemand" based smart and smooth optimized governor!
 	
 	   If in doubt, say N.
+
+config CPU_FREQ_GOV_SMARTASSV2
+	tristate "'smartassV2' cpufreq governor"
+	depends on CPU_FREQ
+	default y
+	help
+		'smartassV2' - a "smart" governor
+		If in doubt, say N.
 
 menu "x86 CPU frequency scaling drivers"
 depends on X86
