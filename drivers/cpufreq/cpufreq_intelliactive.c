@@ -129,9 +129,9 @@ static int timer_slack_val = DEFAULT_TIMER_SLACK;
  */
 static unsigned int up_threshold_any_cpu_load = 70;
 static unsigned int sync_freq = 594000;
-static unsigned int up_threshold_any_cpu_freq = 918000;
+static unsigned int up_threshold_any_cpu_freq = 972000;
 
-static int two_phase_freq_array[NR_CPUS] = {[0 ... NR_CPUS-1] = 1242000} ;
+static int two_phase_freq_array[NR_CPUS] = {[0 ... NR_CPUS-1] = 1458000} ;
 
 static int cpufreq_governor_intelliactive(struct cpufreq_policy *policy,
 		unsigned int event);
