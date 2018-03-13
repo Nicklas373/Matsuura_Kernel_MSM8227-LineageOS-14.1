@@ -40,7 +40,7 @@ mv TEMP/modules/zImage TEMP/Pre-built_ZIP/ZIP/zImage
 mv TEMP/modules TEMP/Pre-built_ZIP/ZIP/modules/system/lib/modules
 cd TEMP/Pre-built_ZIP/ZIP
 rm Matsuura_Kernel.zip
-zip -r Matsuura_Kernel *
+zip -r9 Matsuura_Kernel * -x README Matsuura_Kernel
 rm -rfv META-INF
 rm -rfv modules
 rm -rfv patch
