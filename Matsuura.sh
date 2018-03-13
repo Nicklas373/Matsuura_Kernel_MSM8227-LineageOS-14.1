@@ -40,7 +40,7 @@ mv TEMP/modules/zImage TEMP/Pre-built_ZIP/ZIP/zImage
 mv TEMP/modules TEMP/Pre-built_ZIP/ZIP/modules/system/lib/modules
 cd TEMP/Pre-built_ZIP/ZIP
 rm Matsuura_Kernel.zip
-zip -r9 Matsuura_Kernel * -x README Matsuura_Kernel
+zip -r Matsuura_Kernel *
 rm -rfv META-INF
 rm -rfv modules
 rm -rfv patch
@@ -50,11 +50,7 @@ rm -rfv anykernel.sh
 rm -rfv README.md
 rm -rvf zImage
 cd $kernel_source/TEMP/Pre-built_ZIP/ZIP
-mv Matsuura_Kernel.zip $kernel_source/TEMP/Pre-built_ZIP/Sign/Matsuura_Kernel.zip
-cd $kernel_source/TEMP/Pre-built_ZIP/Sign
-java -jar signapk.jar signature-key.Nicklas@XDA.x509.pem signature-key.Nicklas@XDA.pk8 Matsuura_Kernel.zip Matsuura_Kernel-nicki-signed.zip
-mv  Matsuura_Kernel-nicki-signed.zip $kernel_source/Build/Matsuura_Kernel-nicki-signed.zip
-rm Matsuura_Kernel.zip
+mv Matsuura_Kernel.zip $kernel_source/Build/Matsuura_Kernel-nicki.zip
 echo "Matsuura Kernel Completed to build"
 echo "Thanks to XDA - Developers"
 echo "プロジェクト　ラブライブ | Project Matsuura (2018)"
