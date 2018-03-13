@@ -2,8 +2,8 @@ Changelog :
 
 Seventh Build (20180313):
 - Rebase Kernel with latest security patch to 20171231 (Based on MSM8960T Source)
-- Added EXFAT Drivers Support v1.2.9
-- Added SDCARDFS Drivers Support v0.1
+- Added EXFAT Drivers Support v1.2.9 (Based on MSM8960T Source)
+- Added SDCARDFS Drivers Support v0.1 (Based on MSM8960T Source)
 - Updated F2FS to latest source with security fix (Based on MSM8930 Source)
 - Added Compatibility with anykernel2 by @osmosis
 - Set up some kernel configuration to run on boot by default

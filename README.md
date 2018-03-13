@@ -37,7 +37,7 @@ This kernel feature is :
 - Optimized I/O Sched
 - Compiled using GCC 5.4.X Hyper Toolchains
 - Added Compatibility With AnyKernel2 Inline Kernel Patching Script
-- Updated CVE Patch From LineageOS Kernel Source 20171231 (MSM8960T)
+- Updated CVE Patch From LineageOS Kernel Source 20171231
 
 #PRIVATE PROJECT
 
@@ -48,7 +48,7 @@ Build status :
 - Fourth Build      Done	   (20170913) [Uploaded]
 - Five   Build	    Done	   (20171002) [Uploaded]/[XDA Version]
 - Sixth  Build 	    Done 	   (20180122) [Uploaded]/[XDA Version]
-- Seventh Build     Building	   (20180212) [Not Uploaded]
+- Seventh Build     Building	   (20180314) [Not Uploaded]
 
 Thanks to :
 Ron Gokhale (@PecanCM)    [For Kernel Source]
