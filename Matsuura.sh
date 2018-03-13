@@ -36,14 +36,19 @@ cp TEMP/Pre-built_ZIP/Template/Matsuura_Kernel.zip TEMP/Pre-built_ZIP/ZIP/Matsuu
 cd $kernel_zip
 unzip Matsuura_Kernel.zip
 cd $kernel_source
-mv TEMP/modules/zImage TEMP/Pre-built_ZIP/ZIP/tmp/kernel/boot.img-zImage
-mv TEMP/modules TEMP/Pre-built_ZIP/ZIP/tmp
+mv TEMP/modules/zImage TEMP/Pre-built_ZIP/ZIP/zImage
+mv TEMP/modules TEMP/Pre-built_ZIP/ZIP/modules/system/lib/modules
 cd TEMP/Pre-built_ZIP/ZIP
 rm Matsuura_Kernel.zip
 zip -r Matsuura_Kernel *
 rm -rfv META-INF
-rm -rfv system
-rm -rfv tmp
+rm -rfv modules
+rm -rfv patch
+rm -rfv ramdisk
+rm -rfv tools
+rm -rfv anykernel.sh
+rm -rfv README.md
+rm -rvf zImage
 cd $kernel_source/TEMP/Pre-built_ZIP/ZIP
 mv Matsuura_Kernel.zip $kernel_source/TEMP/Pre-built_ZIP/Sign/Matsuura_Kernel.zip
 cd $kernel_source/TEMP/Pre-built_ZIP/Sign
